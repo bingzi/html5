@@ -100,3 +100,37 @@ body {
 .page p{
   margin-bottom: 10px;
 }
+
+/*test 测试代码重构*/
+/*.footer{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.footer .nav-links{
+	display: table-cell;
+}*/
+
+// table 等分
+@mixin table-equal($children: li) {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    $childrenEle: li div p a span strong;
+    @if index($childrenEle, $children) {
+        #{$children} {
+            display: table-cell;
+        }
+    }
+    @else {
+        .#{$children} {
+            display: table-cell;
+        }
+    }
+}
+
+.nav-links{
+    @include table-equal;
+  
+}

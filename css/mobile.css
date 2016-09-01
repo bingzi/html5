@@ -69,68 +69,91 @@ body {
   flex-direction: column;
 }
 
-.wrap-page {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+
+/*初始化结束*/
+
+.header{
+  background: #0fd7ba;
+  width: 100%;
+  height: 60px;
+
 }
 
-.header,.footer{
-  height:44px;
-  background-color: #fff;
-  text-align: center;
-  line-height:44px;
-  position:relative;
-  z-index:990;
+.header .logo{
+    font-size: 1.4rem;
+    line-height: 60px;   
+    color: #fff;
+    text-align: center;
 }
-.header{
-  border-bottom: 1px solid #f00;
+
+.header a.conts-tips {
+    font-size: 1.4rem;
+    line-height: 60px;    
+    color: #fff;
+    font-weight: bold;
 }
-.footer{
-  border-top: 1px solid #f00;
-}
-.wrap-page{
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-}
-.page{
+
+.header_nav{
+  background-color: #111111;
   padding: 10px;
 }
-.page p{
-  margin-bottom: 10px;
+
+.header_nav ul {
+  overflow: hidden;
 }
 
-/*test 测试代码重构*/
-/*.footer{
-	display: table;
-	table-layout: fixed;
-	width: 100%;
+.header_nav li {
+  float: left;
+  width: 24.9%;
+  text-align: center;
+}
+/* line 101, ../sass/header.scss */
+.header_nav a {
+  display: block;
+  line-height: 29px;
+  color: #0fd7ba;
+  font-size: 14px;
 }
 
-.footer .nav-links{
-	display: table-cell;
-}*/
 
-// table 等分
-@mixin table-equal($children: li) {
-    display: table;
-    table-layout: fixed;
+.hot_pic {
+  width: 100%;
+  max-width: 400px;
+  min-height: 176px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.hot_pic img{
+  display: block;
     width: 100%;
-    $childrenEle: li div p a span strong;
-    @if index($childrenEle, $children) {
-        #{$children} {
-            display: table-cell;
-        }
-    }
-    @else {
-        .#{$children} {
-            display: table-cell;
-        }
-    }
+    height: auto;
 }
 
-.nav-links{
-    @include table-equal;
-  
+.hot_pic .pic_slide_txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 10px;
+  height: 28px;
+  line-height: 28px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

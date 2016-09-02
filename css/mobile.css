@@ -43,14 +43,9 @@ optgroup { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
-html, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
 h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
 ul, ol, li, dl, dd { margin: 0; padding: 0; }
 ul, ol { list-style: none outside none; }
-h1, h2, h3 { line-height: 2; font-weight: normal; }
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.4rem; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
@@ -61,7 +56,7 @@ p{ display: block;
     -webkit-margin-end: 0px;}
    
 
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
 
 /*布局文件*/
 body {
@@ -326,4 +321,48 @@ font-size: 12px;
   display: block;
   width: 100%;
   height: auto;
+}
+
+/*内容页面*/
+/*中间标题*/
+.h-title {
+    width: 100%;
+    height: 6.0rem;
+    line-height: 6.0rem;
+    font-size: .48rem;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/*返回键*/
+
+.h-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.3333333333rem;
+    height: 1.3333333333rem
+}
+.h-back .h-back-svg {
+    position: absolute;
+    top: .36rem;
+    left: .24rem;
+    width: .2666666667rem;
+    height: .4933333333rem;
+    background: url(../img/back.png?t=1470802600460) no-repeat;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+}
+/*文章区块*/
+.mod_article {
+    margin: 3.0rem 1.0rem 1.0rem 1.0rem;
+}
+
+/*文章标题*/
+
+.mod_article h1 {
+    font-size: 2.3rem;
 }

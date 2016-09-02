@@ -1,5 +1,5 @@
 /*移动端reset文件*/
-html { font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 62.5%; }
+html { font-family: "arial", "microsoft yahei", "\5b8b\4f53"; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 62.5%; }
 body { margin: 0; font-size: 1.4rem; line-height: 1.5; color: #333333; background-color: white; height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
@@ -54,6 +54,12 @@ h3 { font-size: 1.4rem; }
 input::-moz-placeholder, textarea::-moz-placeholder { color: #cccccc; }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #cccccc; }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+p{ display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;}
+   
 
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -75,27 +81,27 @@ body {
 .header{
   background: #0fd7ba;
   width: 100%;
-  height: 60px;
+  height: 6.0rem;
 
 }
 
 .header .logo{
     font-size: 1.4rem;
-    line-height: 60px;   
+    line-height: 6.0rem;   
     color: #fff;
     text-align: center;
 }
 
 .header a.conts-tips {
     font-size: 1.4rem;
-    line-height: 60px;    
+    line-height: 6.0rem;    
     color: #fff;
     font-weight: bold;
 }
 
 .header_nav{
   background-color: #111111;
-  padding: 10px;
+  padding: 1.0rem;
 }
 
 .header_nav ul {
@@ -110,10 +116,22 @@ body {
 /* line 101, ../sass/header.scss */
 .header_nav a {
   display: block;
-  line-height: 29px;
+  line-height: 2.9rem;
   color: #0fd7ba;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
+
+
+.footer {
+  background-color: #181818;
+  color: #5e5e5e;
+  text-align: center;
+  font-size: 12px;
+}
+
+
+
+/*轮换图*/
 
 
 .hot_pic {
@@ -147,13 +165,165 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 10px;
-  height: 28px;
-  line-height: 28px;
+  padding: 0 1rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.hot_news {
+  width: 100%;
+  background-color: #f5f5f5;
+  overflow: hidden;
+  margin: 0 auto;
+  line-height: 3.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+}
+
+.conts-tips{
+  background: #0fd7ba;
+    height: 1.1rem;
+    line-height: 1.6rem;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 0.4rem .6rem;
+    margin: 0.5rem 0 0 0.5rem;
+    border-radius: 0.5rem;
+    -webkit-box-flex: 0;
+}
+/*模块头部*/
+.mod_header {
+    height: 3.7rem;
+    line-height: 3.7rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+
+.mod_tit {
+    float: left;
+    position: relative;
+    height: 38px;
+    padding: 0 10px;
+    margin-bottom: -1px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0fd7ba;
+}
+
+.mod_tit:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: -26px;
+  width: 0;
+  height: 0;
+  border-top: 38px solid #0fd7ba;
+  border-right: 26px solid transparent;
+}
+  /*头部更多*/
+
+  .mod_header_more {
+    float:right;
+    margin-right: 10px;
+    padding-right: 24px;    
+    background-size: 14px 14px;    
+    background-position: right 11px;
+    color: #999999;
+}
+
+/*新闻列表*/
+.mod_txtlist li {
+  height: 3.8rem;
+  line-height: 3.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+}
+/* line 9, ../sass/mod/txtList.scss */
+.mod_txtlist li:last-child {
+  margin-bottom: -1px;
+}
+
+
+.mod_txtlist a {
+    height: 3rem;
+    padding: 0 1.0rem 0 1.0rem;  
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-box-flex: 1;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    color: #545758;
+}
+
+/*列表带缩略图+标题，日期*/
+
+.mod_picTxt {
+    display: block;
+    padding: 5px 10px;
+    overflow: hidden;
+    color: #333333;
+}
+.mod_picTxt img {
+    float: left;
+    display: block;
+    margin-right: 10px;
+    width: 120px;
+    height: 80px;
+}
+
+.mod_picTxt_til {
+    font-size: 16px;
+    overflow: hidden;
+    height: 60px;
+}
+
+.mod_picTxt .list_time{
+float: right; 
+color: #7f7f7f;
+font-size: 12px;
+
+}
+
+/*双横排图片效果*/
+.mod_columnPic,
+.mod_columnPicTil {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  overflow: hidden
+}
+.mod_columnPic_inner,
+.mod_columnPicTil_inner {
+  padding-right: 10px;
+}
+/* line 12, ../sass/mod/columnPic.scss */
+.mod_columnPic_item,
+.mod_columnPicTil_item {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+/* line 16, ../sass/mod/columnPic.scss */
+.mod_columnPic_item a,
+.mod_columnPicTil_item a {
+  position: relative;
+  display: block;
+  padding: 10px 0 0 10px;
+  margin: 0 auto;
+}
+/* line 24, ../sass/mod/columnPic.scss */
+.mod_columnPic_item img,
+.mod_columnPicTil_item img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

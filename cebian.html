@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<link rel="stylesheet" href="css/mobile.css">
+	<title>移动端重构</title>
+
+</head>
+<body>
+	<div class="header">
+
+		<div class="h-title">资料站</div>
+
+	</div>
+
+	<nav class="header_nav">
+		<ul>
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">图片</a>
+			</li>
+			<li>
+				<a href="#">视频</a>
+			</li>
+			<li>
+				<a href="#">攻略</a>
+			</li>
+			<li>
+				<a href="#">新闻</a>
+			</li>
+			<li>
+				<a href="#">下载</a>
+			</li>
+		</ul>
+	</nav>
+	
+
+	<div id="aside" class="g-2-2">
+
+<div class="blank10"></div>
+<div class="mod-tab-hd">
+		<h3>专题推荐</h3>
+		<div class="act">
+			<a class="more" href="http://www.wulinshe.com/youxizhuanti">更多»</a>
+		</div>
+	</div>
+<div class="mod-tab-bd">
+
+<div class="hot-activity clearfix xuxian">
+	<a href="http://www.wulinshe.com/zt/baihefenbu.html">
+		<img alt="采集资源" src="http://wulinshe.com/zhuantixiaotu/136X55-caijiziyuan.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/caomeifenbu.html">
+		<img alt="农业资源" src="http://wulinshe.com/zhuantixiaotu/136X55-nongyeziyuan.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/kuangchanfenbu.html">
+		<img alt="矿产分布" src="http://wulinshe.com/zhuantixiaotu/136X55-kuangchanziyuan.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/baihuafenbu.html">
+		<img alt="木材资源" src="http://wulinshe.com/zhuantixiaotu/136X55-mucaiziyuan.jpg"></a>
+	</div>	
+
+	<div class="hot-activity clearfix xuxian">
+	<a href="http://www.wulinshe.com/zt/bxslyeshengzhiwu.html">
+		<img alt="野生植物图" src="http://wulinshe.com/zhuantixiaotu/136X55-yeshengzhiwu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/gweslyeshengshumu.html">
+		<img alt="野生树木图" src="http://wulinshe.com/zhuantixiaotu/136X55-yeshengshumu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/gweslshumuhuizong.html">
+		<img alt="树木汇总分布图" src="http://wulinshe.com/zhuantixiaotu/136X55-suoyoushumu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/mtzhzhenzhubei.html">
+		<img alt="海产分布图" src="http://wulinshe.com/zhuantixiaotu/136X55-haichanziyuan.jpg"></a>
+	</div>
+
+	<div class="hot-activity clearfix xuxian">
+	<a href="https://wulinshe.taobao.com">
+		<img alt="淘宝店" src="http://wulinshe.com/zhuantixiaotu/290X150-taobao.jpg"></a>
+	</div>
+
+<div class="hot-activity clearfix xuxian">
+	<a href="http://www.wulinshe.com/youxizhuanti/20141216/631.html">
+		<img alt="滑翔翼大全" src="http://wulinshe.com/zhuantixiaotu/136X55-huaxiangyidaquan.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/zuoqi.html">
+		<img alt="坐骑大全" src="http://wulinshe.com/zhuantixiaotu/136X55-zuoqidaquan.jpg"></a>
+	<a href="http://www.wulinshe.com/youxizhuanti/20150828/3081.html">
+		<img alt="鱼群分布点" src="http://wulinshe.com/zhuantixiaotu/136X55-yuqunfenbudian.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/lanmeifenbu.html">
+		<img alt="蓝莓分布点" src="http://wulinshe.com/zhuantixiaotu/136X55-lanmeifenbudian.jpg"></a>
+	<a href="http://www.wulinshe.com/shenghuojineng/20150901/3096.html">
+		<img alt="大师巨匠装备" src="http://wulinshe.com/zhuantixiaotu/136X55-dashijujiang.jpg"></a>
+	<a href="http://www.wulinshe.com/zonghejingyan/20151107/3555.html">
+		<img alt="地图探险分布点" src="http://wulinshe.com/zhuantixiaotu/136X55-ditutanxian.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/zhizao_chenlu.html">
+		<img alt="晨露套装制作材料" src="http://wulinshe.com/zhuantixiaotu/136X55-chenlutaozhuang.jpg"></a>
+	<a href="http://www.wulinshe.com/youxizhuanti/20151106/3542.html">
+		<img alt="黑曜石装备制作材料" src="http://wulinshe.com/zhuantixiaotu/136X55-heiyaoshizhuangbei.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/xinyueshi_wuqi.html">
+		<img alt="武器新月石大全" src="http://wulinshe.com/zhuantixiaotu/136X55-wuqixinyueshi.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/xinyueshi_fangju.html">
+		<img alt="防具新月石大全" src="http://wulinshe.com/zhuantixiaotu/136X55-fangjuxinyueshi.jpg"></a>
+	</div>	
+	
+
+	<h5>伐木对比专题</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/zt/famuchanchu.html">原木产出</a>
+			<a href="http://www.wulinshe.com/zt/famuyongtu.html">原木用途</a>
+			<a href="http://www.wulinshe.com/zt/guoshuchanchu.html">果树产出</a>
+			<a href="http://www.wulinshe.com/zt/guoshi.html">果实用途</a>
+		</li>
+		<li>
+			<a href="http://www.wulinshe.com/zt/famuqunluo.html">树木群落产出对比</a>
+		</li>
+	</ul>
+	<h5 class="first">采集产出对比专题</h5>
+	<ul class="mod-asd" style="padding-bottom:9px;">
+
+		<li>
+			<a href="http://www.wulinshe.com/zt/cjzyhc.html">花草类</a>
+			<a href="http://www.wulinshe.com/zt/cjzyxxl.html">香辛类</a>
+			<a href="http://www.wulinshe.com/zt/cjzyyc.html">药草类</a>
+			<a href="http://www.wulinshe.com/zt/haichanpinzonghe.html">珊瑚类</a>
+		</li>
+</ul>
+	<h5 class="first">农业产出对比专题</h5>
+	<ul class="mod-asd" style="padding-bottom:9px;">
+		<li>
+			<a href="http://www.wulinshe.com/zt/nyzygw.html">农业谷物</a>
+			<a href="http://www.wulinshe.com/zt/nyzysc.html">农业蔬菜产出</a>
+			<a href="http://www.wulinshe.com/zt/wenshi_nongye.html">农业温室花盆</a>
+		</li>
+		</ul>
+	<h5 class="first">畜牧产出对比专题</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/zt/xmcchf.html">畜牧产出大全</a>
+			<a href="http://www.wulinshe.com/zt/xmzyccdb.html">畜牧笼子产出</a>
+			<a href="http://www.wulinshe.com/zt/dlnczwkdb.html">达鲁农场大全</a>
+		</li>
+	</ul>
+<div class="hot-activity clearfix ">	
+	<a href="http://www.wulinshe.com/zt/househaidao.html">
+		<img alt="居住区分布图" src="http://wulinshe.com/zhuantixiaotu/136X55-juzhuqu.jpg"></a>
+	<a href="http://www.wulinshe.com/moniqi.html">
+		<img alt="上古世纪天赋技能模拟器" src="http://wulinshe.com/zhuantixiaotu/136X55-moniqi.jpg"></a>
+		
+	<a href="http://www.wulinshe.com/zt/famuchanchu.html">
+		<img alt="原木产出对比" src="http://wulinshe.com/zhuantixiaotu/136X55-yuanmuchanchu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/famuyongtu.html">
+		<img alt="原木产出用途" src="http://wulinshe.com/zhuantixiaotu/136X55-yuanmuyongtu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/guoshuchanchu.html">
+		<img alt="果树产出专题" src="http://wulinshe.com/zhuantixiaotu/136X55-guoshuchanchu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/guoshi.html">
+		<img alt="果实用途" src="http://wulinshe.com/zhuantixiaotu/136X55-guoshuyongtu.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/nvxingshizhuang.html">
+		<img alt="时装专题" src="http://wulinshe.com/zhuantixiaotu/136X55-shizhuangzhuanti.jpg"></a>
+	<a href="http://www.wulinshe.com/zt/wuqishizhuang.html">
+		<img alt="武器外形" src="http://wulinshe.com/zhuantixiaotu/136X55-wuqiwaixing.jpg"></a>
+</div>
+
+
+
+
+
+</div>
+
+
+<!-- }热门关键字推荐 -->
+<div class="blank10"></div>
+	<div class="mod-tab-hd">
+		<h3>热门关键字搜索</h3>
+		<div class="act">
+			<a class="more" href="http://bbs.wulinshe.com/forum-40-1.html">更多»</a>
+		</div>
+	</div>
+	<div class="mod-tab-bd">
+		<ul class="mod-grade">
+			<li class="clearfix">
+				<a href="http://wulinshe.com/shenghuojineng/20141125/81.html">稻草人</a>
+				<a href="http://wulinshe.com/youxizhuanti/20141216/631.html">滑翔翼</a>
+				<a href="http://www.wulinshe.com/zt/shizixingsuixingkuang.html">碎星矿</a>
+				<a href="http://wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141204/284.html">黑珍珠</a>
+			</li>
+			<li class="clearfix">
+				<a href="http://wulinshe.com/zonghejingyan/20141129/230.html">红龙任务</a>
+				<a href="http://wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141204/286.html">蓝莓介绍</a>
+				<a href="http://wulinshe.com/zt/dongchongxiacaofenbu.html">冬虫夏草</a>
+				<a href="http://wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150124/1036.html">橡子蜂箱</a>
+			</li>
+			<li class="clearfix" style="*margin-bottom:0;">
+				<a href="http://wulinshe.com/zonghejingyan/20141126/107.html">黑珍珠战船</a>
+				<a href="http://wulinshe.com/shenghuojineng/20141126/86.html">农夫工作台</a>
+				<a href="http://wulinshe.com/zonghejingyan/20141126/90.html">新手小窍门</a>
+				<a href="http://www.wulinshe.com/zhuanqianjingyan/20150803/2836.html">德菲纳之星</a>
+			</li>
+		</ul>
+	</div>
+
+<div class="blank10"></div>
+<div class="mod-tab-hd">
+	<h3>常用资料</h3>
+</div>
+<div class="mod-tab-bd">
+	<h5 class="first">南瓜头</h5>
+	<ul class="mod-asd" style="padding-bottom:9px;">
+		<li>
+			<a href="http://www.wulinshe.com/shenghuojineng/20141126/101.html">稻草人</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/zonghediaoluo/20150727/2766.html">西大陆南瓜头任务</a>
+			<a href="http://www.wulinshe.com/zhuanqianjingyan/20150721/2705.html">东大陆南瓜头任务</a>
+		</li>
+		<li>
+			<a href="http://www.wulinshe.com/shenghuojineng/20141126/86.html">农夫工作台</a>
+			<a href="http://www.wulinshe.com/shenghuojineng/20141125/81.html">改良南瓜头</a>
+			<a href="http://www.wulinshe.com/peifangzhizao/jianzhuzhizuo/20150710/2619.html">南瓜头凉亭</a>
+		</li>
+
+		<li>
+			<a href="http://www.wulinshe.com/zonghejingyan/20150105/811.html">阳光南瓜头</a>
+			<a href="http://www.wulinshe.com/fangwujiaju/2015-06-24/2219.html">月光南瓜头</a>
+			<a href="http://www.wulinshe.com/fangwujiaju/20150801/2799.html">星光南瓜头</a>
+		</li>
+	</ul>
+
+	<h5>热门·南瓜头任务贸易材料</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/dongzhiwu/20150727/2767.html">胡萝卜</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/dongzhiwu/20150727/2768.html">百合</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150202/1175.html">橄榄</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150114/956.html">牛奶</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150125/1038.html">山羊毛</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150424/1730.html">香蕉</a>
+			
+		</li>
+		<li>
+		<a href="http://www.wulinshe.com/shenghuojineng/20141126/87.html">家畜综合饲料</a>
+		<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150803/2838.html">南瓜</a>
+		<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150803/2839.html">四叶草</a>
+		<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150329/1486.html">稻草捆</a>
+		
+		</li>
+
+	</ul>
+	<h5>杂志皮革油</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150803/2840.html">石岩碎片</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150803/2841.html">花生</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/dongzhiwu/20150126/1062.html">红色珊瑚草</a>
+			<a href="#">小麦</a>
+		
+		</li>
+	</ul>
+	<h5>树木材料</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150805/2856.html">雪桦粗木</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150422/1648.html">云杉粗木</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150805/2857.html">枫树粗木</a>
+		
+		</li>
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141209/347.html">白桦粗木</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141209/349.html">楠木粗木</a>
+	
+		</li>
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150423/1713.html">栎树粗木</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150423/1709.html">柳树粗木</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150423/1710.html">竹笋</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141224/719.html">静电叶片</a>
+		</li>
+	</ul>
+	<h5>水果果实</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150422/1690.html">栗子</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150321/1357.html">杏子</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150422/1686.html">榉木果实</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150322/1380.html">枣椰</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150424/1730.html">香蕉</a>
+		</li>
+	</ul>
+	<h5>畜牧产物</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150710/2616.html">蜂蜜</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150105/821.html">黄金蜂巢</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150125/1038.html">山羊毛</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150114/956.html">牛奶</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150329/1486.html">稻草捆</a>
+		</li>
+		<li>
+			
+			<a href="http://www.wulinshe.com/shenghuojineng/20150805/2862.html">野生畜牧分布</a>
+		
+		</li>
+
+	</ul>
+	<h5>稀有物品</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141204/286.html">蓝莓</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150107/844.html">冬虫夏草</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150107/843.html">雷击木</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141204/284.html">黑珍珠</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141204/287.html">山参</a>
+		</li>
+			<li>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20141204/289.html">庭院的神秘粉末</a>
+			<a href="http://www.wulinshe.com/zt/szxpykuangchan.html">碎星矿</a>
+			<a href="http://www.wulinshe.com/diaoluodaquan/cailiaolaiyuan/20150320/1340.html">天然橡胶</a>
+	
+		</li>
+	
+	</ul>
+
+</div>
+<div class="blank10"></div>
+<!-- 论坛热帖{ -->
+<div id="tab8" class="mod-tab-s5 fl">
+		<div class="mod-tab-hd">
+			<h3>论坛热帖</h3>
+			<div class="act">
+				<a class="more" href="http://bbs.wulinshe.com/forum-40-1.html">更多»</a>
+			</div>
+		</div>
+		<div class="mod-tab-bd J_content">
+			<div class="mod-tab-content">
+				<ul class="mod-art">
+					<li><a href="http://bbs.wulinshe.com/thread-9855-1-1.html" title="上古世纪韩服3.0版本西大陆新地图">上古世纪韩服3.0版本西大陆新地图</a></li><li><a href="http://bbs.wulinshe.com/thread-9854-1-1.html" title="上古世纪日服 UCC时装 优雅的泳衣">上古世纪日服 UCC时装 优雅的泳衣</a></li><li><a href="http://bbs.wulinshe.com/thread-9853-1-1.html" title="[日服]上古世纪三周年纪念特别礼物">[日服]上古世纪三周年纪念特别礼物</a></li><li><a href="http://bbs.wulinshe.com/thread-9852-1-1.html" title="上古世纪日服 新出的懒蛋蛋系列">上古世纪日服 新出的懒蛋蛋系列</a></li><li><a href="http://bbs.wulinshe.com/thread-9850-1-1.html" title="黑曜石五阶段武器、防具材料及基础属性展示">黑曜石五阶段武器、防具材料及基础属性展示</a></li><li><a href="http://bbs.wulinshe.com/thread-9849-1-1.html" title="上古世纪韩服3.0.X版本更新介绍">上古世纪韩服3.0.X版本更新介绍</a></li>				</ul>
+
+				<ul class="mod-art">
+					<li><a href="http://bbs.wulinshe.com/thread-9848-1-1.html" title="【活动】8月11日版本更新活动公告">【活动】8月11日版本更新活动公告</a></li><li><a href="http://bbs.wulinshe.com/thread-9847-1-1.html" title="8月11日例行维护暨版本更新公告">8月11日例行维护暨版本更新公告</a></li><li><a href="http://bbs.wulinshe.com/thread-9846-1-1.html" title="7月韩服新出了一个坐骑">7月韩服新出了一个坐骑</a></li><li><a href="http://bbs.wulinshe.com/thread-9845-1-1.html" title="8月韩服新时装和其他一些东西">8月韩服新时装和其他一些东西</a></li><li><a href="http://bbs.wulinshe.com/thread-9844-1-1.html" title="讨论|0809|8.11新服一出 直升50 送4400装评  有何感想">讨论|0809|8.11新服一出 直升50 送4400装评</a></li><li><a href="http://bbs.wulinshe.com/thread-9842-1-1.html" title="上古世纪利维坦打法 经验分享，团队配置介绍">上古世纪利维坦打法 经验分享，团队配置介绍</a></li>				</ul>
+			</div>
+		</div>
+	</div>
+	<script>KISSDW.tabs("#tab8", {event: "hover", effect: "fade"});</script>
+
+	<div class="blank10"></div>
+<div class="blank10"></div>
+<div class="mod-tab-hd">
+	<h3>热门资源分布图</h3>
+</div>
+<div class="mod-tab-bd">
+	<h5 class="first">矿产资源推荐</h5>
+	<ul class="mod-asd" style="padding-bottom:9px;">
+		<li>
+			<a href="http://www.wulinshe.com/zt/suishipingyuankuangchan.html">碎石平原</a>
+			<a href="http://www.wulinshe.com/zt/szxpykuangchan.html">十字星平原</a>
+			<a href="http://www.wulinshe.com/zt/sgqlkuangchan.html">双冠丘陵</a>
+			<a href="http://www.wulinshe.com/zt/shanhuhaiantiekuang.html">珊瑚海岸</a>
+			<a href="http://www.wulinshe.com/zt/baixuesenlintkuangchan.html">白雪森林</a>
+			<a href="http://www.wulinshe.com/zt/geweierkuangchan.html">格威尔森林</a>
+		</li>
+		<li>
+			<a href="http://www.wulinshe.com/zt/lmbdkuangchan.html">黎明半岛</a>
+			<a href="http://www.wulinshe.com/zt/ynstecaikuang.html">伊尼斯泰尔</a>
+			<a href="http://www.wulinshe.com/zt/chhytiekuang.html">彩虹荒野</a>
+			<a href="http://www.wulinshe.com/zt/hjsmtiekuang.html">虎脊山脉</a>
+			<a href="http://www.wulinshe.com/zt/lieyingtiekuang.html">猎鹰高原</a>
+		</li>
+
+	</ul>
+
+	<h5>农业资源分布</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://wulinshe.com/zt/huluobofenbu.html">胡萝卜分布</a>
+			<a href="http://wulinshe.com/zt/lanmeifenbu.html">蓝莓分布</a>
+			<a href="http://wulinshe.com/zt/xiaomifenbu.html">玉米分布</a>
+			<a href="http://wulinshe.com/zt/xiaomifenbu.html">小米分布</a>
+					
+		</li>
+		<li>
+		<a href="http://wulinshe.com/zt/huashengfenbu.html">花生分布</a>
+			
+		</li>
+
+	</ul>
+	<h5>采集资源分布</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/zt/dongchongxiacaofenbu.html">冬虫夏草分布</a>
+			<a href="http://www.wulinshe.com/zt/hujiaofenbu.html">胡椒分布</a>
+			<a href="http://www.wulinshe.com/zt/xiangcaofenbu.html">香草分布</a>
+
+			
+		</li>
+		<li>
+			<a href="http://wulinshe.com/zt/fanhonghuafenbu.html">番红花分布</a>
+			<a href="http://wulinshe.com/zt/luhuifenbu.html">芦荟分布</a>
+			<a href="http://wulinshe.com/zt/changnaoshenfenbu.html">长脑参分布</a>
+			
+		</li>
+		<li>
+			<a href="http://wulinshe.com/zt/baihefenbu.html">百合分布</a>
+			<a href="http://wulinshe.com/zt/huweilanfenbu.html">虎尾兰分布</a>
+			<a href="http://wulinshe.com/zt/shuixianhuafenbu.html">水仙分布</a>
+			<a href="http://wulinshe.com/zt/siyecaofenbu.html">四叶草分布</a>
+		</li>
+		<li>
+			<a href="http://wulinshe.com/zt/dichuidecaofenbu.html">低垂的草分布</a>
+			<a href="http://wulinshe.com/zt/buzhimingcaojingfenbu.html">不知名草茎分布</a>
+			<a href="http://www.wulinshe.com/zt/zacaoqunluofenbu.html">杂草群落分布</a>
+			
+		</li>
+		<li>
+			<a href="http://wulinshe.com/zt/chanraodetengwanfenbu.html">交错的藤蔓分布</a>
+				
+			
+		</li>
+	</ul>
+	<h5>树木资源分布</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://wulinshe.com/zt/xuehuashufenbu.html">雪桦分布</a>
+			<a href="http://wulinshe.com/zt/fengshufenbu.html">枫树分布</a>
+			<a href="http://www.wulinshe.com/zt/songshufenbu.html">松树分布</a>
+			<a href="http://wulinshe.com/zt/xiangjiaoshufenbu.html">橡胶树分布</a>
+		
+		</li>
+		<li>
+			<a href="http://wulinshe.com/zt/yunshanshufenbu.html">云杉树分布</a>
+			<a href="http://wulinshe.com/zt/baihuafenbu.html">白桦树分布</a>
+			<a href="http://wulinshe.com/zt/nanmufenbu.html">楠木分布</a>
+			<a href="http://wulinshe.com/zt/zhuzifenbu.html">竹子分布</a>
+	
+		</li>
+	</ul>
+	<h5>果树资源分布</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://wulinshe.com/zt/ganlanshufenbu.html">橄榄分布</a>
+			<a href="http://wulinshe.com/zt/zaoyeshufenbu.html">枣椰树分布</a>
+			<a href="http://wulinshe.com/zt/bananatreefenbu.html">香蕉树分布</a>
+			<a href="http://wulinshe.com/zt/xiangshufenbu.html">橡树分布</a>
+		
+		</li>
+		<li>
+			<a href="http://wulinshe.com/zt/jumufenbu.html">榉木分布</a>
+			<a href="http://wulinshe.com/zt/banlifenbu.html">栗树分布</a>
+			<a href="http://wulinshe.com/zt/xingshufenbu.html">杏树分布</a>
+				
+		</li>
+	</ul>
+	<h5>水产分布（江珧，鲍鱼，黑珍珠）</h5>
+	<ul class="mod-asd">
+		<li>
+			<a href="http://www.wulinshe.com/zt/mtzhzhenzhubei.html">迷途之海分布</a>
+			<a href="http://www.wulinshe.com/zt/zydzhenzhubei.html">自由岛分布图</a>
+			
+		</li>
+		
+
+	</ul>
+	
+
+</div>
+<div class="blank10"></div>
+<!-- 综合信息栏目 -->
+<div class="mod-tab-hd">
+		<h3>综合经验</h3>
+		<div class="act">
+			<a class="more" href="http://www.wulinshe.com/zonghejingyan/">更多»</a>
+		</div>
+	</div>
+	<div class="mod-tab-bd">
+		<ul class="mod-art" style="padding-bottom:5px"><li><a href="/zonghejingyan/20160806/3924.html" title="利维坦打法经验分享 团队配置介绍">利维坦打法经验分享 团队配置介绍</a></li><li><a href="/zonghejingyan/20160715/3915.html" title="抢先 上古世纪神赐时装合成详解分析">抢先 上古世纪神赐时装合成详解分析</a></li><li><a href="/zonghejingyan/20160714/3911.html" title="上古世纪罪恶值消除 罪恶值消除攻略">上古世纪罪恶值消除 罪恶值消除攻略</a></li><li><a href="/zonghejingyan/20160415/3866.html" title="韩服2.9版本国家建立步骤 专业汉化版">韩服2.9版本国家建立步骤 专业汉化版</a></li><li><a href="/zonghejingyan/20160414/3864.html" title="新时装[胜利纪念晚礼服]属性及外观">新时装[胜利纪念晚礼服]属性及外观</a></li></ul>
+		<ul class="mod-art" style="padding-bottom:5px"><li><a href="/zonghejingyan/20160414/3863.html" title="3000个【公测礼包】测试报告">3000个【公测礼包】测试报告</a></li><li><a href="/zonghejingyan/20160411/3861.html" title="韩服2.9版本国家建立步骤 民间汉化版">韩服2.9版本国家建立步骤 民间汉化版</a></li><li><a href="/zonghejingyan/20160406/3844.html" title="上古世纪50级至55级各级所需经验一览">上古世纪50级至55级各级所需经验一览</a></li><li><a href="/zonghejingyan/20160331/3840.html" title="上古世纪建筑升级 哈里拉古典黑瓦为">上古世纪建筑升级 哈里拉古典黑瓦为</a></li><li><a href="/zonghejingyan/20160321/3839.html" title="图书馆任务知识书籍典藏馆的图画碎片">图书馆任务知识书籍典藏馆的图画碎片</a></li></ul>
+	</div>
+	<div class="blank10"></div>
+<!-- 游戏信息状态 -->
+<div class="mod-tab-hd">
+	<h3>游戏信息</h3>
+</div>
+<div class="mod-tab-bd">
+	<ul class="mod-art-a">
+		<li>游戏名称：上古世纪</li>
+		<li>运营公司：腾讯</li>
+		<li>游戏类型：3D MMORPG</li>
+		<li>游戏状态：2015年8月6日不删档限号测试</li>
+		<li>公测时间：2015年9月不限号测试</li>
+		<li>责任编辑：db13</li>
+		<li>
+			官方网站：
+					
+			http://age.qq.com
+		</li>
+		<li>
+			游戏论坛：
+			<a href="http://bbs.wulinshe.com">雾林社论坛</a>
+		</li>
+
+	</ul>
+</div>
+
+</div>
+	<footer class="footer">
+		<div class="footer">
+			<div class="footer_about">
+				<p>© 2012 - 2016 手游那点事, All Rights Reserved.</p>
+				<p>
+					投稿邮箱：
+					<a href="mailto:tougao@sykong.com">tougao@sykong.com</a>
+					合作联系QQ：732051989
+				</p>
+				<p>
+					<a href="http://www.miitbeian.gov.cn" rel="external nofollow" target="_blank">湘ICP备11006313号-2</a>
+				</p>
+				<p>联系我们QQ：732051989</p>
+
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>

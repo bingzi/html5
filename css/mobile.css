@@ -366,3 +366,144 @@ font-size: 12px;
 .mod_article h1 {
     font-size: 2.3rem;
 }
+
+
+/*文章日期，作者 模块*/
+.mod_article_info {
+  display: block;
+  color: #7f7f7f;
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.mod_article_info_from {display: block;}
+.mod_article_info_from a {color: #7f7f7f;}
+.mod_article_info_date {
+  float: left;
+  margin-right: 10px;
+}
+
+/*tag标签模块*/
+.mod_article_info a[rel="tag"] {
+  float: left;
+  height: 2.0rem;
+  line-height: 2.0rem;
+  background-color: #dadada;
+  margin-right: 4px;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #898989;
+}
+
+/* line 37, ../sass/mod/article.scss */
+.mod_article_info_comment,
+.mod_article_info_read {
+  float: right;
+  margin-left: 0.8rem;
+  padding-left: 1.4rem;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.2rem auto;
+}
+
+/* line 46, ../sass/mod/article.scss */
+.mod_article_info_comment {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAZVJREFUeNqslF9EQ1Ecx+9uExGxp54iYkTEEuslYik9lRg99DT1stdGSlsUkd56ylIkGjEmGrHXiMhixIiIiNjTuKQ+P36X07XNbduXj3PPued8f7/zN5BOpy1D/ZCEBZiEXsufHuEODjKZTM1tDBjm03AFg/CsAxyf5uMQgQ9IEKAojUH9KT9u4R0m1NiXMHLLEYqs+PC9BHmbSg+cwSdM/cfYE6RKMavjs9RDYj4HY7CpAdoWhrKMCQjBmpjHoA55qwsiwBNFBWbEfAjeNICpGygbdZndD6wYbZeYlRvEeBHfoJ6IvgYdijo9V19wAlWjraRGXsmRdsRcphGHYXg1Ohx7BshJWve0nbqnxVgWSTQK17IsOc3+yOqOkpr5ha3ZSpaLsNPhZi5T7EGB75J7iVIQhl3ZZdjX9fz2aRrVjGWzH2DVe/1FG7AFA20k7ugKbBOsbl5/V4faIaZvTKSFWVyTqOibksL0z+0ONhgkUQs+Mj3X92hUCXufDruD/buHeag162B3eOxaBrC78JY0DfArwADR0XHugJBNrgAAAABJRU5ErkJggg==");
+}
+
+/* line 50, ../sass/mod/article.scss */
+.mod_article_info_read {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAPCAYAAAD+pA/bAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgZJREFUeNp8lF9EQ1Ecx29tokT0FMuIKCVKiVJKiYhSIkqRUkzpoZdSbD01RaIsPUSkNNI0pYgUMVKKSFmkNMWIERHR98f3cpzOOnzc3XvO+X7P789Zitfrtf4ZzaAGuEAJyAMO8AjuQAxEfD5fOJlAisEgHfSCMVAEvsAFeNDW5YMqrhfDZbAGs091Uaq2qRI8g1UK94AMUA+GNRo51wHiYBG8wqAhmYGk45SLZXMF2OJcAdil+RvYZ8osCIZANX7WMpJDvHfqBq1gDxxR+EQxbgLXoA4cgzAjvQRd9iKInuMhRkGwjfdeuwbZeEaZ5zbwrYhngnvwwaji/J4lJ2VkxRB7V4ykCbaZkUKJYICd0aeJy2hhB40q4jISwAPkcJ3qBhj84DEIpNgjYtAN1jUBe7j4vDHMyTcRc+sTMEmwq7rE4JbhpBlEYnyWGuZKGPmLwcBBzTsxWOAFWjKIHNBkkXlXaxNgbXYM+2Z4Qf2pDHUaDHGTQ1koeexnMaO8HwEWXjrJoxaYpxfxKRGXznLy+zwLF2Do4+wqi61ZBmZZdDnAFZhkem1hSeMc23oS737TX4Xch02m4IzGB9b/Q27uBIXl9g9DfMOedGqL5RLlsnXHeGMlTRHwxK75YUO4+V8ktXlnmlcg/qEKOg0nSrDwQjtPVs7ocrgmzu4JMoUh9v+f8SvAAM3InAC8QNeWAAAAAElFTkSuQmCC");
+}
+
+/* line 56, ../sass/mod/article.scss */
+/*文章内容*/
+.mod_article_content p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #585858;
+  text-align: justify;
+  margin: 2.0rem 0;
+}
+/* line 64, ../sass/mod/article.scss */
+.mod_article_content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* line 111, ../sass/mod/article.scss */
+.mod_article_share {
+  font-size: 12px;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* line 117, ../sass/mod/article.scss */
+.share_good {
+  float: left;
+  padding: 0 6px 0 26px;
+  line-height: 26px;
+  border: 1px solid #f0f0f0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAaCAYAAABctMd+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAATdJREFUeNpi5L++i4EEIAfEv4D4BTGKmUgwOBCIHwLxEyCuoLbhBlCaGYjbgdiYmoYrovFdqWm4GRr/L7UM9wZidTSxm4Q0MRKRWjiB+BIQq6AZrAdNORS5fCaawd+BOJSQwcQYngDEsWhiE4H4MqVJ0QnqagZSwxoGWHCI8wPxaiBmwyI3DUrjcj0o2K7hi9DDQGzDQD4AGe4GMhyUGkqhgt1Q135goByUgYIlHIgboQLvgHgxA3XAWSZoOoYBHioYCgrzdCDex8JAfcAJjfQLTAy0AaCS04ZWhn8B4q20MPwgEJuAMhstDLcH4nxSy3NSgAStDH8ExK20MByU7QtAGQib4X8pNFwLiOdDkyK4VNyNVMJtglYCf2EKyAAfYY4EGX4HWmUhg0QgTkMrGogNlm4YByDAANgyO3BZRFuHAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: 6px center;
+  background-size: auto 13px;
+  color: #0fd7ba;
+}
+
+/* line 130, ../sass/mod/article.scss */
+.mod_article_share_blue,
+.mod_article_share_red {
+  float: right;
+  line-height: 26px;
+  padding: 0 10px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+
+/* line 139, ../sass/mod/article.scss */
+.mod_article_share_blue {
+  color: #409cff;
+  border-color: #409cff;
+}
+
+/* line 144, ../sass/mod/article.scss */
+.mod_article_share_red {
+  color: #df4349;
+  border-color: #df4349;
+}
+
+
+/*
+相关资讯*/
+/* line 59, ../sass/mod/header.scss */
+.mod_headerKid_title {
+  color: #0fd7ba;
+  padding-left: 0.6rem;
+  border-left: 3px solid #0fd7ba;
+}
+
+.mod_headerKid {
+  height: 1.7rem;
+  line-height: 1.7rem;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1.0rem;
+  overflow: hidden;
+}
+
+
+#aside .mod-tab-hd {
+    overflow: hidden;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 30px;
+    background: #39B898;
+}
